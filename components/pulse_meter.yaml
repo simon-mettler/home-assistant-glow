@@ -9,7 +9,7 @@ api:
             id: button_reset_total
 
 number:
-  # Set the pulse rate of the LED on your meter
+  # Set the pulse rate of the LED on your meter:
   - platform: template
     id: select_pulse_rate
     name: 'Puls rate - imp/kWh'
@@ -54,7 +54,7 @@ sensor:
     icon: mdi:flash-outline
     accuracy_decimals: 0
     pin: ${pulse_pin}
-    # internal_filter: 100ms
+    internal_filter: 150ms
     on_raw_value:
       then:
         - light.turn_on:
